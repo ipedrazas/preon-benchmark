@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<dataModel IOversion="3.1.0" encrypted="false" targetNamespace="http://www.pedrazas.me/benchmark/hazelcast" targetPackage="me.pedrazas.benchmark.hazelcast" inputMask="Java Class" outputMask="Java Class" elementFormDefault="Qualified" attributeFormDefault="Unqualified" encoding="UTF-8" hibernateIDGeneratorMethodDefault="native" name="me.pedrazas.benchmark.hazelcast.dod" version="0.0.1">
+  <type>
+    <complexType specifyStructure="true" abstract="false" contentModel="Sequence" specialisation="Generic complex" excludeFromDatabase="false" processAsBatch="false" name="Customer">
+      <element identifier="false" min="0" max="1" typeRef="#string" name="Email"></element>
+      <element identifier="false" min="0" max="1" typeRef="#number_int" name="Age"></element>
+      <element identifier="false" min="0" max="1" typeRef="#string" name="Id"></element>
+      <element identifier="false" min="0" max="1" typeRef="#string" name="Name"></element>
+    </complexType>
+  </type>
+  <element identifier="false" min="1" max="1" typeRef="Customer" name="Customer"></element>
+  <namespace uri="http://www.pedrazas.me/benchmark/hazelcast" prefix=""></namespace>
+</dataModel>
