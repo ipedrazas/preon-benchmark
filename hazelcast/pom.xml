@@ -4,6 +4,51 @@
 	<groupId>me.pedrazas.benchmarks</groupId>
 	<artifactId>hazelcast</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<java.version>1.8</java.version>
+
+		<maven.version>3.0</maven.version>
+		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+		<maven.assembly.plugin.version>2.4</maven.assembly.plugin.version>
+
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>${maven.assembly.plugin.version}</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${project.basedir}/src/main/assembly/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<configuration>
+							<finalName>${project.artifactId}-${project.version}</finalName>
+						</configuration>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 	<dependencies>
 		<dependency>
 			<groupId>com.hazelcast</groupId>
