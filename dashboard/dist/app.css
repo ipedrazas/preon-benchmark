@@ -1,0 +1,18 @@
+.jobs{
+
+    font-size: 24px;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    padding-left: 20px;
+}
+
+.proxyinfo{
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 70%;
+}
